@@ -1,0 +1,345 @@
+<div data-ng-hide="animated" class="load-wrap">
+	<div class="loading-line" loading="loadLine"></div>
+	<div class="loading-tip"></div>
+</div>
+<div data-ng-show="animated" class="progress load-wrap">
+  <div class="progress-bar progress-bar-striped" data-ng-class="{'active': !animateFlag}" role="progressbar" aria-valuenow="{{loadLine}}" aria-valuemin="0" aria-valuemax="100" style="width: {{loadLine}}%">
+	<span class="sr-only">45% Complete</span>
+  </div>
+</div>
+<div class="tutorial-main-container">
+	<h1 class="tutorial-main-title container">
+		Getting Started
+	</h1>
+	<div class="container tutorial-container" data-current-step="1" data-ng-copy="copy();">
+		<!-- 1st part of tutorial start -->
+		<section class="tutorial-part">
+			<span class="tutorial-part-no">1</span>
+			<div class="tutorial-part-title">
+				<h4>Choose an app name</h4>
+				<span class="tutorial-part-subtitle">An
+		<strong>database</strong>.
+			App names are unique and should not contain spaces.
+		</span>
+			</div>
+			<div class="tutorial-part-body">
+				<div class="with-load-container tutorial-input-style tutorial-app-name-container">
+					<input type="text" data-ng-model="variables.app_name" data-ng-keyup="app_submit($event);" class="tutorial-part-input" placeholder="App name" />
+					<div class="loading-container">
+						<span class="vertical-0">
+							<span class="vertical-1">
+								<i class="fa fa-spinner fa-spin"></i>Loading
+							</span>
+						</span>
+					</div>
+					<div class="input-success">
+						<i class="fa fa-check-square-o"></i>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- 1st part of tutorial END -->
+		<!-- 2nd part of tutorial start -->
+		<section class="tutorial-part">
+			<span class="tutorial-part-no">2</span>
+			<div class="tutorial-part-title">
+				<h4>Choose a language</h4>
+				<span class="tutorial-part-subtitle">Are you a Javascript fanboy or a backend dev?</span>
+			</div>
+			<div class="tutorial-part-body">
+				<div class="tutorial-input-style">
+					<select class="tutorial-part-select" data-ng-model="variables.language" data-ng-options="item for item in languages" data-ng-change="language_change();">
+						<option value=''>Choose Language</option>
+					</select>
+				</div>
+			</div>
+		</section>
+		<!-- 2nd part of tutorial start -->
+		<!-- 3rd part of tutorial start -->
+		<section class="tutorial-part">
+			<span class="tutorial-part-no">3</span>
+			<div class="tutorial-part-title">
+				<h4>Index Data</h4>
+				<span class="tutorial-part-subtitle">
+					Now that we have created our first app, let's write some data in it.
+				</span>
+			</div>
+			<div class="tutorial-part-body code-container">
+				<div class="code-block">
+					<div class="row">
+						<div class="col-xs-12">
+							<span data-ng-show="variables.language == 'cURL'">
+								<p class="txt-white">We can do this by simply PUTing a <span class="created_app_jsonobject">JSON object</span> in a <span class="created_app_type">$type</span> and
+							<span class="created_app_id">$id</span> location.</p>
+							</span>
+							<span data-ng-show="variables.language == 'Javascript'">
+								<p class="txt-white">
+									We will first instantiate the Appbase() object
+									with the appname and security credentials.
+								</p>
+								<p class="txt-white">Next, we call the <strong>index()</strong> method to insert a <span class="created_app_jsonobject">JSON object</span> in the following <span class="created_app_type">$type</span> and <span class="created_app_id">$id</span> location.</p>
+							</span>
+							<pre>
+							<code data-ng-show="variables.language == 'cURL'">curl -XPUT https://<span class="created_app_user">$user</span>:<span class="created_app_pass">$pass</span>@scalr.api.appbase.io/<span class="created_app_name">$app</span>/<span class="created_app_type">$type</span>/<span class="created_app_id">$id</span> -d \'<span class="created_app_jsonobject">$jsonobject</span>'
+					</code>
+					<code class="javascript" data-ng-show="variables.language == 'Javascript'">var appbaseRef = new Appbase({
+  url: "https://<span class="created_app_user">$user</span>:<span class="created_app_pass">$pass</span>@scalr.api.appbase.io",
+  appname: <span class="created_app_name">$app</span>
+})
+
+appbaseRef.index({
+  type: <span class="created_app_type">$type</span>,
+  id: <span class="created_app_id">$id</span>,
+  body: <span class="created_app_jsonobject">$jsonobject</span>
+})
+				  </code>
+				</pre>
+						</div>
+						<span class="col-xs-6 pull-right text-right">
+			  <a href="javascript:void(0);" data-ng-click="code_next('index_data',4)" class="btn btn-run">Run</a>
+			</span>
+					</div>
+				</div>
+				<div class="console-block highlight-light">
+					<h3>Response</h3>
+					<div class="with-load-container">
+						<div class="loading-container">
+							<span class="vertical-0">
+				<span class="vertical-1">
+				  <i class="fa fa-spinner fa-spin"></i>Loading
+				</span>
+							</span>
+						</div>
+						<pre>
+			  <code>
+				<span class="show_response"></span>
+			  </code>
+			</pre>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- 3rd part of tutorial END -->
+		<!-- 4th part of tutorial start -->
+		<section class="tutorial-part">
+			<span class="tutorial-part-no">4</span>
+			<div class="tutorial-part-title">
+				<h4>GET Data</h4>
+				<span class="tutorial-part-subtitle">
+		  In this step, we will retrieve our JSON object from it's stored location.
+		</span>
+			</div>
+			<div class="tutorial-part-body code-container">
+				<div class="code-block">
+					<div class="row">
+						<div class="col-xs-12">
+							<span data-ng-show="variables.language == 'cURL'">
+			  <p class="txt-white">We can GET data in two formats:</p>
+			  <p class="txt-white">1. /:app/:type/:id - Returns existing data at a particular location.</p>
+			  <p class="txt-white">2. /:app/:type/:id?stream=true - Subscribes to <b>new</b> changes for the data.</p>
+			</span>
+							<span data-ng-show="variables.language == 'Javascript'">
+			  <p class="txt-white">We can GET data in two formats:</p>
+			  <p class="txt-white">1. get() - Returns existing data at a particular location.</p>
+			  <p class="txt-white">2. getStream() - Subscribes to new changes for the data.</p>
+			</span>
+							<pre>
+			  <code data-ng-show="variables.language == 'cURL'">curl -N https://<span class="created_app_user">$user</span>:<span class="created_app_pass">$pass</span>@scalr.api.appbase.io/<span class="created_app_name">$app</span>/<span class="created_app_type">$type</span>/1
+</code>
+&nbsp;
+<code data-ng-show="variables.language == 'cURL'">
+curl -N https://<span class="created_app_user">$user</span>:<span class="created_app_pass">$pass</span>@scalr.api.appbase.io/<span class="created_app_name">$app</span>/<span class="created_app_type">$type</span>/1<span class="highlight">?stream=true</span>
+			  </code>
+			  <code class="javascript" data-ng-show="variables.language == 'Javascript'">appbaseRef.get({
+	type: <span class="created_app_type">$type</span>,
+	id: <span class="created_app_id">$id</span>,
+}).on('data', function(res) {
+  console.log(res)
+})
+</code>
+&nbsp;
+<code class="javascript" data-ng-show="variables.language == 'Javascript'">
+appbaseRef.getStream({
+	type: <span class="created_app_type">$type</span>,
+	id: <span class="created_app_id">$id</span>,
+}).on('data', function(res) {
+  console.log(res)
+})
+		  </code>
+		  </pre>
+						</div>
+						<span class="col-xs-6 pull-right text-right">
+			  <a href="javascript:void(0);" data-ng-click="code_next('readStream',5)" class="btn btn-run">Run</a>
+			</span>
+					</div>
+				</div>
+				<div class="console-block highlight-light">
+					<h3>Response</h3>
+					<div class="with-load-container">
+						<div class="loading-container">
+							<span class="vertical-0">
+				<span class="vertical-1">
+				  <i class="fa fa-spinner fa-spin"></i>Loading
+				</span>
+							</span>
+						</div>
+						<pre>
+			  <code>
+				<span class="show_response"></span>
+			  </code>
+			</pre>
+						<div class="row console-btn-row" data-ng-show="vars.getStream.consoleBtn">
+							<div class="col-xs-12">
+								<span class="col-xs-6 pull-left text-left">
+				  <a href="javascript:void(0);"
+				  class="signal-circle {{vars.getStream.spinner.container || 'btn-warning'}}"
+				  data-toggle="popover" data-trigger="hover"
+				  data-content="{{vars.getStream.spinner.status.text}}"
+				  data-placement="top">
+					<span class="spinner {{vars.getStream.spinner.active || ''}}"></span>
+								</a>
+								</span>
+								<span class="col-xs-6 pull-right text-right">
+				  <a href="javascript:void(0);" data-ng-click="insert_data.show('Update')"
+				  class="btn btn-run"
+				  data-toggle="popover" data-trigger="hover"
+				  data-content="{{vars.getStream.btnText.text}}"
+				  data-placement="top">
+				  Update Data
+				</a>
+				</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- 4th part of tutorial END -->
+		<!-- 5th part of tutorial start -->
+		<section class="tutorial-part">
+			<span class="tutorial-part-no">5</span>
+			<div class="tutorial-part-title">
+				<h4>Search Data</h4>
+				<span class="tutorial-part-subtitle">In step 3. and 4., we saw how to <b>insert</b> and <b>get</b> data. In this step, we will write a simple query to match our database objects.
+		</span>
+			</div>
+			<div class="tutorial-part-body code-container">
+				<div class="code-block">
+					<div class="row">
+						<div class="col-xs-12">
+							<span data-ng-show="variables.language == 'cURL'">
+			<p class="txt-white">Similar to GET, search can be used in two formats:</p>
+			<p class="txt-white">1. /:app/:type/_search - Returns existing matches for a database query.</p>
+			<p class="txt-white">2. /:app/:type/_search?stream=true - Subscribes to new matches for a database query.</p>
+		  </span>
+							<span data-ng-show="variables.language == 'Javascript'">
+			<p class="txt-white">Similar to get(), search can be used in two formats:</p>
+			<p class="txt-white">1. search() - Returns existing matches for a database query.</p>
+			<p class="txt-white">2. searchStream() - Subscribes to new matches for a database query.</p>
+		  </span>
+							<pre>
+			<code data-ng-show="variables.language == 'cURL'">curl -N -XPOST https://<span class="created_app_user">$user</span>:<span class="created_app_pass">$pass</span>@scalr.api.appbase.io/<span class="created_app_name">$app</span>/<span class="created_app_type">$type</span>/_search -d \
+	'{
+		"query": {
+			"match_all": {}
+		}
+	}'
+</code>
+&nbsp;
+<code data-ng-show="variables.language == 'cURL'">
+curl -N -XPOST https://<span class="created_app_user">$user</span>:<span class="created_app_pass">$pass</span>@scalr.api.appbase.io/<span class="created_app_name">$app</span>/<span class="created_app_type">$type</span>/_search<span class="highlight">?stream=true</span> -d \
+	'{
+		"query": {
+			"match_all": {}
+		}
+	}'
+		</code>
+		  <code class="javascript" data-ng-show="variables.language == 'Javascript'">appbaseRef.search({
+	type: <span class="created_app_type">$type</span>,
+	body: {
+		query: {
+			match_all: {}
+		}
+	}
+}).on('data', function(res) {
+	console.log(res)
+})
+</code>
+&nbsp;
+<code class="javascript" data-ng-show="variables.language == 'Javascript'">
+appbaseRef.searchStream({
+	type: <span class="created_app_type">$type</span>,
+	body: {
+		query: {
+			match_all: {}
+		}
+	}
+}).on('data', function(res) {
+	console.log(res)
+})
+  </code>
+  </pre>
+						</div>
+						<span class="col-xs-6 pull-right text-right">
+			  <a href="javascript:void(0);" data-ng-click="code_next('searchStream',6)" class="btn btn-run">Run</a>
+			</span>
+					</div>
+				</div>
+				<div class="console-block highlight-light">
+					<h3>Response</h3>
+					<div class="with-load-container">
+						<div class="loading-container">
+							<span class="vertical-0">
+				<span class="vertical-1">
+				  <i class="fa fa-spinner fa-spin"></i>Loading
+				</span>
+							</span>
+						</div>
+						<pre>
+			  <code>
+				<span class="show_response"></span>
+			  </code>
+			</pre>
+						<div class="row console-btn-row" data-ng-show="vars.searchStream.consoleBtn">
+							<div class="col-xs-12">
+								<span class="col-xs-6 pull-left text-left">
+				  <a href="javascript:void(0);"
+				  class="signal-circle {{vars.searchStream.spinner.container || 'btn-warning'}}"
+				  data-toggle="popover" data-trigger="hover"
+				  data-content="{{vars.searchStream.spinner.status.text}}"
+				  data-placement="top">
+					<span class="spinner {{vars.searchStream.spinner.active || ''}}"></span>
+								</a>
+								</span>
+								<span class="col-xs-6 pull-right text-right">
+				  <a href="javascript:void(0);" data-ng-click="insert_data.show('Insert')" class="btn btn-run"
+				   data-toggle="popover" data-trigger="hover"
+				  data-content="{{vars.searchStream.btnText.text}}"
+				  data-placement="top">
+					Insert Data
+				  </a>
+				</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- 5th part of tutorial END -->
+		<section class="tutorial-part tutorial-finish">
+			<span class="tutorial-part-no">
+		<i class="fa fa-trophy"></i>
+	  </span>
+			<div class="tutorial-part-body">
+				<h4>The tutorial is complete.
+		  <br>Congrats! You can continue to play, or go to the apps dashboard.</h4>
+				<div class="margin-top-gap">
+					<a href="../" class="btn btn-lg theme-btn">Go to Dashboard</a>
+					<a href="http://docs.appbase.io" targe="_blank" class="btn btn-lg theme-btn">Documentation</a>
+				</div>
+			</div>
+		</section>
+	</div>
+	<!-- 1st part of tutorial end -->
+</div>
+<textarea id="onlyCopy"></textarea>

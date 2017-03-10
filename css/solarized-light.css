@@ -1,0 +1,91 @@
+/*
+
+Orginal Style from ethanschoonover.com/solarized (c) Jeremy Hull <sourdrums@gmail.com>
+
+*/
+.highlight-light {
+  /* Solarized Green */
+  /* Solarized Cyan */
+  /* Solarized Blue */
+  /* Solarized Yellow */
+  /* Solarized Orange */
+  /* Solarized Red */
+  /* Solarized Violet */ }
+  .highlight-light .hljs {
+    display: block;
+    overflow-x: auto;
+    padding: 0.5em;
+    background: #fdf6e3;
+    color: #657b83;
+    -webkit-text-size-adjust: none; }
+  .highlight-light .hljs, .highlight-light .hljs-tag, .highlight-light .css .hljs-rules, .highlight-light .css .hljs-value, .highlight-light .aspectj .hljs-function, .highlight-light .css .hljs-function
+.hljs-preprocessor, .highlight-light .hljs-pragma {
+    color: #657b83; }
+  .highlight-light .hljs-comment,
+  .highlight-light .diff .hljs-header,
+  .highlight-light .hljs-doctype,
+  .highlight-light .hljs-pi,
+  .highlight-light .lisp .hljs-string {
+    color: #93a1a1; }
+  .highlight-light .hljs-keyword,
+  .highlight-light .hljs-winutils,
+  .highlight-light .method,
+  .highlight-light .hljs-addition,
+  .highlight-light .css .hljs-tag,
+  .highlight-light .hljs-request,
+  .highlight-light .hljs-status,
+  .highlight-light .nginx .hljs-title {
+    color: #859900; }
+  .highlight-light .hljs-number,
+  .highlight-light .hljs-command,
+  .highlight-light .hljs-string,
+  .highlight-light .hljs-tag .hljs-value,
+  .highlight-light .hljs-rule .hljs-value,
+  .highlight-light .hljs-doctag,
+  .highlight-light .tex .hljs-formula,
+  .highlight-light .hljs-regexp,
+  .highlight-light .hljs-hexcolor,
+  .highlight-light .hljs-link_url {
+    color: #2aa198; }
+  .highlight-light .hljs-title,
+  .highlight-light .hljs-localvars,
+  .highlight-light .hljs-chunk,
+  .highlight-light .hljs-decorator,
+  .highlight-light .hljs-built_in,
+  .highlight-light .hljs-identifier,
+  .highlight-light .vhdl .hljs-literal,
+  .highlight-light .hljs-id,
+  .highlight-light .css .hljs-function,
+  .highlight-light .hljs-name {
+    color: #268bd2; }
+  .highlight-light .hljs-attribute,
+  .highlight-light .hljs-variable,
+  .highlight-light .lisp .hljs-body,
+  .highlight-light .smalltalk .hljs-number,
+  .highlight-light .hljs-constant,
+  .highlight-light .hljs-class .hljs-title,
+  .highlight-light .hljs-parent,
+  .highlight-light .hljs-type,
+  .highlight-light .hljs-link_reference {
+    color: #b58900; }
+  .highlight-light .hljs-preprocessor,
+  .highlight-light .hljs-preprocessor .hljs-keyword,
+  .highlight-light .hljs-pragma,
+  .highlight-light .hljs-shebang,
+  .highlight-light .hljs-symbol,
+  .highlight-light .hljs-symbol .hljs-string,
+  .highlight-light .diff .hljs-change,
+  .highlight-light .hljs-special,
+  .highlight-light .hljs-attr_selector,
+  .highlight-light .hljs-subst,
+  .highlight-light .hljs-cdata,
+  .highlight-light .css .hljs-pseudo,
+  .highlight-light .hljs-header {
+    color: #cb4b16; }
+  .highlight-light .hljs-deletion,
+  .highlight-light .hljs-important {
+    color: #dc322f; }
+  .highlight-light .hljs-link_label {
+    color: #6c71c4; }
+  .highlight-light .tex .hljs-formula {
+    background: #eee8d5; }

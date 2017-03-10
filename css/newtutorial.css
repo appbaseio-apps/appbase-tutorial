@@ -1,0 +1,482 @@
+@font-face {
+  font-family: 'Source Sans Pro Extra Light Italic';
+  src: url("/styles/fonts/source/sourcesanspro-extralightit.eot");
+  src: url("/styles/fonts/source/sourcesanspro-extralightit.eot?#iefix") format("embedded-opentype"), url("/styles/fonts/source/sourcesanspro-extralightit.woff2") format("woff2"), url("/styles/fonts/source/sourcesanspro-extralightit.woff") format("woff"), url("/styles/fonts/source/sourcesanspro-extralightit.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Source Sans Pro Light';
+  src: url("/styles/fonts/source/sourcesanspro-light.eot");
+  src: url("/styles/fonts/source/sourcesanspro-light.eot?#iefix") format("embedded-opentype"), url("/styles/fonts/source/sourcesanspro-light.woff2") format("woff2"), url("/styles/fonts/source/sourcesanspro-light.woff") format("woff"), url("/styles/fonts/source/sourcesanspro-light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Source Sans Pro Regular';
+  src: url("/styles/fonts/source/sourcesanspro-regular.eot");
+  src: url("/styles/fonts/source/sourcesanspro-regular.eot?#iefix") format("embedded-opentype"), url("/styles/fonts/source/sourcesanspro-regular.woff2") format("woff2"), url("/styles/fonts/source/sourcesanspro-regular.woff") format("woff"), url("/styles/fonts/source/sourcesanspro-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Source Sans Pro Bold';
+  src: url("/styles/fonts/source/sourcesanspro-bold.eot");
+  src: url("/styles/fonts/source/sourcesanspro-bold.eot?#iefix") format("embedded-opentype"), url("/styles/fonts/source/sourcesanspro-bold.woff2") format("woff2"), url("/styles/fonts/source/sourcesanspro-bold.woff") format("woff"), url("/styles/fonts/source/sourcesanspro-bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Source Sans Pro Extra Light';
+  src: url("/styles/fonts/source/sourcesanspro-extralight.eot");
+  src: url("/styles/fonts/source/sourcesanspro-extralight.eot?#iefix") format("embedded-opentype"), url("/styles/fonts/source/sourcesanspro-extralight.woff2") format("woff2"), url("/styles/fonts/source/sourcesanspro-extralight.woff") format("woff"), url("/styles/fonts/source/sourcesanspro-extralight.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Source Sans Pro Semi Bold';
+  src: url("/styles/fonts/source/sourcesanspro-semibold.eot");
+  src: url("/styles/fonts/source/sourcesanspro-semibold.eot?#iefix") format("embedded-opentype"), url("/styles/fonts/source/sourcesanspro-semibold.woff2") format("woff2"), url("/styles/fonts/source/sourcesanspro-semibold.woff") format("woff"), url("/styles/fonts/source/sourcesanspro-semibold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Source Sans Pro Light Italic';
+  src: url("/styles/fonts/source/sourcesanspro-lightit.eot");
+  src: url("/styles/fonts/source/sourcesanspro-lightit.eot?#iefix") format("embedded-opentype"), url("/styles/fonts/source/sourcesanspro-lightit.woff2") format("woff2"), url("/styles/fonts/source/sourcesanspro-lightit.woff") format("woff"), url("/styles/fonts/source/sourcesanspro-lightit.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Source Sans Pro Italic';
+  src: url("/styles/fonts/source/sourcesanspro-it.eot");
+  src: url("/styles/fonts/source/sourcesanspro-it.eot?#iefix") format("embedded-opentype"), url("/styles/fonts/source/sourcesanspro-it.woff2") format("woff2"), url("/styles/fonts/source/sourcesanspro-it.woff") format("woff"), url("/styles/fonts/source/sourcesanspro-it.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Source Sans Pro Semibold Italic';
+  src: url("/styles/fonts/source/sourcesanspro-semiboldit.eot");
+  src: url("/styles/fonts/source/sourcesanspro-semiboldit.eot?#iefix") format("embedded-opentype"), url("/styles/fonts/source/sourcesanspro-semiboldit.woff2") format("woff2"), url("/styles/fonts/source/sourcesanspro-semiboldit.woff") format("woff"), url("/styles/fonts/source/sourcesanspro-semiboldit.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Source Sans Pro Black Italic';
+  src: url("/styles/fonts/source/sourcesanspro-blackit.eot");
+  src: url("/styles/fonts/source/sourcesanspro-blackit.eot?#iefix") format("embedded-opentype"), url("/styles/fonts/source/sourcesanspro-blackit.woff2") format("woff2"), url("/styles/fonts/source/sourcesanspro-blackit.woff") format("woff"), url("/styles/fonts/source/sourcesanspro-blackit.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Source Sans Pro Black';
+  src: url("/styles/fonts/source/sourcesanspro-black.eot");
+  src: url("/styles/fonts/source/sourcesanspro-black.eot?#iefix") format("embedded-opentype"), url("/styles/fonts/source/sourcesanspro-black.woff2") format("woff2"), url("/styles/fonts/source/sourcesanspro-black.woff") format("woff"), url("/styles/fonts/source/sourcesanspro-black.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Source Sans Pro Bold Italic';
+  src: url("/styles/fonts/source/sourcesanspro-boldit.eot");
+  src: url("/styles/fonts/source/sourcesanspro-boldit.eot?#iefix") format("embedded-opentype"), url("/styles/fonts/source/sourcesanspro-boldit.woff2") format("woff2"), url("/styles/fonts/source/sourcesanspro-boldit.woff") format("woff"), url("/styles/fonts/source/sourcesanspro-boldit.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+/* console */
+@font-face {
+  font-family: "Source Sans Pro Light";
+  src: url("/styles/fonts/source/sourcesanspro-light.ttf"); }
+
+body {
+  background: #eeeeee; }
+
+.tutorial-main-container {
+  background: #eeeeee;
+  color: #999;
+  padding-bottom: 20px; }
+  @media screen and (max-width: 800px) {
+    .tutorial-main-container {
+      padding-left: 20px;
+      padding-right: 20px; } }
+  .tutorial-main-container .txt-white {
+    color: #fff; }
+  .tutorial-main-container .tutorial-main-title {
+    text-align: center;
+    padding-bottom: 20px;
+    position: relative;
+    color: #3BC7F6; }
+    .tutorial-main-container .tutorial-main-title .close-btn {
+      position: absolute;
+      right: 0;
+      top: 30px;
+      width: 36px;
+      height: 36px;
+      font-size: 32px;
+      line-height: 16px;
+      padding: 8px 10px;
+      border-radius: 50%;
+      text-align: center;
+      background: #ccc;
+      color: #fff; }
+    .tutorial-main-container .tutorial-main-title .close-btn:hover {
+      background-color: brown;
+      opacity: 0.6; }
+  .tutorial-main-container .tutorial-container {
+    background: transparent;
+    text-align: center;
+    padding: 0; }
+    .tutorial-main-container .tutorial-container .tutorial-part {
+      padding: 0;
+      position: relative;
+      border-left: 1px solid #2AD37A;
+      border-bottom: 1px solid #ddd;
+      display: block;
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      background: #fff;
+      -webkit-transition: max-height, opacity 0.5s linear;
+      -moz-transition: max-height, opacity 0.5s linear;
+      -ms-transition: max-height, opacity 0.5s linear;
+      -o-transition: max-height, opacity 0.5s linear;
+      transition: max-height, opacity 0.5s linear; }
+      .tutorial-main-container .tutorial-container .tutorial-part .tutorial-part-title {
+        margin-bottom: 10px; }
+      .tutorial-main-container .tutorial-container .tutorial-part h3 {
+        color: #3BC7F6; }
+      .tutorial-main-container .tutorial-container .tutorial-part p {
+        margin: 10px;
+        text-align: left; }
+      .tutorial-main-container .tutorial-container .tutorial-part h4 {
+        font-size: 18px;
+        line-height: 26px;
+        margin: 0; }
+      .tutorial-main-container .tutorial-container .tutorial-part .tutorial-part-subtitle {
+        font-size: 13px;
+        line-height: 12px;
+        display: block;
+        margin: 0 auto;
+        padding-top: 6px; }
+  .tutorial-main-container .tutorial-part-no {
+    position: absolute;
+    left: -22px;
+    top: 0;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    font-size: 22px;
+    line-height: 44px;
+    text-align: center;
+    border: 1px solid #3BC7F6;
+    color: #2AD37A;
+    background: #fff; }
+  .tutorial-main-container .code-container {
+    width: 80%;
+    margin-left: auto !important;
+    margin-right: auto !important; }
+  .tutorial-main-container .tutorial-part-body {
+    margin: 20px 0; }
+    .tutorial-main-container .tutorial-part-body .code-block {
+      background: #232E44;
+      padding: 10px;
+      margin: 0 auto;
+      border-radius: 6px; }
+      @media screen and (max-width: 768px) {
+        .tutorial-main-container .tutorial-part-body .code-block {
+          width: 100%; } }
+      .tutorial-main-container .tutorial-part-body .code-block .hljs {
+        background: #102D42; }
+      .tutorial-main-container .tutorial-part-body .code-block .popover {
+        color: #232E44; }
+        .tutorial-main-container .tutorial-part-body .code-block .popover .highlight-light pre {
+          height: auto; }
+      .tutorial-main-container .tutorial-part-body .code-block span[class^="created_app_"] {
+        cursor: pointer;
+        padding-bottom: 2px;
+        border-bottom: 1px dotted #3BC7F6; }
+      .tutorial-main-container .tutorial-part-body .code-block .nav > li > a {
+        padding: 0 5px;
+        margin: 0;
+        margin-right: 10px;
+        border: 1px solid #3BC7F6;
+        border-radius: 4px;
+        color: #3BC7F6; }
+      .tutorial-main-container .tutorial-part-body .code-block .nav-tabs > li.active > a, .tutorial-main-container .tutorial-part-body .code-block .nav-tabs > li.active > a:hover, .tutorial-main-container .tutorial-part-body .code-block .nav-tabs > li.active > a:focus, .tutorial-main-container .tutorial-part-body .code-block .nav-tabs > li > a:hover {
+        background: #3BC7F6;
+        color: #232E44; }
+      .tutorial-main-container .tutorial-part-body .code-block .nav-tabs {
+        border: 0; }
+      .tutorial-main-container .tutorial-part-body .code-block pre {
+        background: transparent;
+        border: 0;
+        text-align: left;
+        height: auto;
+        overflow: auto; }
+      .tutorial-main-container .tutorial-part-body .code-block code {
+        margin-top: -10px; }
+        .tutorial-main-container .tutorial-part-body .code-block code.javascript {
+          margin-top: -30px; }
+    .tutorial-main-container .tutorial-part-body .console-block {
+      margin-top: 20px; }
+      .tutorial-main-container .tutorial-part-body .console-block pre {
+        max-height: 500px; }
+      .tutorial-main-container .tutorial-part-body .console-block .console-btn-row {
+        padding-bottom: 15px; }
+    .tutorial-main-container .tutorial-part-body .highlight-light {
+      background: #fdf6e3;
+      border: 1px solid #ECE2C7; }
+      .tutorial-main-container .tutorial-part-body .highlight-light div {
+        padding: 5px 10px; }
+      .tutorial-main-container .tutorial-part-body .highlight-light .highlight-response {
+        background: #ECE2C7; }
+      .tutorial-main-container .tutorial-part-body .highlight-light pre {
+        background: transparent;
+        border: 0;
+        text-align: left; }
+  .tutorial-main-container .tutorial-input-style {
+    width: 200px;
+    margin: 0 auto; }
+  .tutorial-main-container .tutorial-part-input {
+    border: 0;
+    border-bottom: 1px solid #3BC7F6;
+    padding: 5px;
+    width: 100%; }
+  .tutorial-main-container .tutorial-part-input[readonly] {
+    background: #f7f7f7; }
+  .tutorial-main-container .input-success {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #2AD37A;
+    font-size: 20px;
+    line-height: 30px; }
+  .tutorial-main-container .tutorial-input-style.disabled .input-success {
+    display: inline-block; }
+  .tutorial-main-container .tutorial-input-style.disabled .tutorial-part-input {
+    padding-right: 30px; }
+  .tutorial-main-container .tutorial-part-select {
+    width: 100%;
+    background: #3BC7F6;
+    color: #fff;
+    border-color: #3BC7F6;
+    padding: 5px 0; }
+  .tutorial-main-container .tutorial-part-input:focus {
+    outline: none; }
+  .tutorial-main-container .theme-btn {
+    background: #3BC7F6;
+    color: #fff;
+    text-transform: uppercase; }
+  .tutorial-main-container .margin-top-gap {
+    margin-top: 20px; }
+  .tutorial-main-container .with-load-container {
+    position: relative; }
+    .tutorial-main-container .with-load-container .loading-container {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      background: rgba(59, 199, 246, 0.7);
+      color: #fff;
+      text-align: center;
+      display: none; }
+      .tutorial-main-container .with-load-container .loading-container .vertical-0 {
+        display: table;
+        width: 100%;
+        height: 100%; }
+      .tutorial-main-container .with-load-container .loading-container .vertical-1 {
+        display: table-cell;
+        vertical-align: middle; }
+  .tutorial-main-container .signal-circle {
+    width: 3rem;
+    height: 3rem;
+    display: inline-block;
+    border-radius: 50%;
+    border: 2px solid #888;
+    position: relative; }
+    .tutorial-main-container .signal-circle:before {
+      content: " ";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      left: 0;
+      top: 0;
+      border-radius: 50%;
+      border: 2px solid #fff; }
+  .tutorial-main-container .spinner {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 100%; }
+    .tutorial-main-container .spinner.active {
+      background-color: #333;
+      -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+      animation: sk-scaleout 1.0s infinite ease-in-out; }
+
+textarea.insert_text {
+  width: 100%;
+  height: 300px; }
+
+.btn-run {
+  background: transparent;
+  border: 1px solid #2AD37A !important;
+  color: #2AD37A;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  font-weight: bold !important; }
+  .btn-run:hover, .btn-run:active, .btn-run:focus {
+    color: #2AD37A !important; }
+
+.tutorial-modal .modal-header {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px; }
+
+.tutorial-modal .modal-content {
+  border-radius: 10px; }
+
+.tutorial-modal .modal-footer {
+  padding-top: 0; }
+
+.tutorial-modal .btn-yes {
+  background: transparent !important;
+  border: 1px solid #3BC7F6 !important;
+  color: #3BC7F6 !important;
+  padding: 0 10px !important;
+  font-weight: bold;
+  text-transform: none !important; }
+
+.tutorial-modal .btn-no {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 36px;
+  height: 36px;
+  font-size: 24px;
+  line-height: 16px;
+  padding: 8px 10px;
+  border-radius: 50%;
+  text-align: center;
+  background: #ccc !important;
+  color: #fff;
+  opacity: 0.8; }
+  .tutorial-modal .btn-no:hover {
+    opacity: 1; }
+
+#onlyCopy {
+  height: 0;
+  width: 0;
+  opacity: 0; }
+
+@-webkit-keyframes sk-scaleout {
+  0% {
+    -webkit-transform: scale(0); }
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 0; } }
+
+@keyframes sk-scaleout {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0; } }
+
+@-webkit-keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0; }
+  to {
+    background-position: 0 0; } }
+
+@-o-keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0; }
+  to {
+    background-position: 0 0; } }
+
+@keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0; }
+  to {
+    background-position: 0 0; } }
+
+.load-wrap.progress {
+  margin: 0 !important;
+  border-radius: 0 !important;
+  height: 4px !important;
+  height: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  background-color: transparent;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); }
+  .load-wrap.progress .progress-bar {
+    background-color: #138FCD !important; }
+  .load-wrap.progress .progress-bar:before {
+    content: "a";
+    position: absolute;
+    right: 0px;
+    top: 0;
+    width: 10px;
+    height: 5px;
+    color: transparent;
+    background: #138FCD;
+    box-shadow: #3BC7F6 4px 0 6px 1px;
+    display: inline-block; }
+  .load-wrap.progress .progress-bar {
+    position: relative;
+    float: left;
+    width: 0;
+    height: 100%;
+    font-size: 12px;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+    background-color: #337ab7;
+    -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+    -webkit-transition: width .6s ease;
+    -o-transition: width .6s ease;
+    transition: width .6s ease; }
+  .load-wrap.progress .progress-striped .progress-bar,
+  .load-wrap.progress .progress-bar-striped {
+    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    -webkit-background-size: 40px 40px;
+    background-size: 40px 40px; }
+  .load-wrap.progress .progress.active .progress-bar,
+  .load-wrap.progress .progress-bar.active {
+    -webkit-animation: progress-bar-stripes 2s linear infinite;
+    -o-animation: progress-bar-stripes 2s linear infinite;
+    animation: progress-bar-stripes 2s linear infinite; }
+  .load-wrap.progress .progress-bar-success {
+    background-color: #5cb85c; }
+  .load-wrap.progress .progress-striped .progress-bar-success {
+    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent); }
+  .load-wrap.progress .progress-bar-info {
+    background-color: #5bc0de; }
+  .load-wrap.progress .progress-striped .progress-bar-info {
+    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent); }
+  .load-wrap.progress .progress-bar-warning {
+    background-color: #f0ad4e; }
+  .load-wrap.progress .progress-striped .progress-bar-warning {
+    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent); }
+  .load-wrap.progress .progress-bar-danger {
+    background-color: #d9534f; }
+  .load-wrap.progress .progress-striped .progress-bar-danger {
+    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent); }

@@ -1,0 +1,105 @@
+@import "source.scss";
+
+$n-blue: #3BC7F6;
+$n-lblue: #86DDF8;
+$n-green: #B6EF7E;
+$n-navy: #232E44;
+$n-gray: #999;
+$light-gray: #f9f9f9;
+$gray-bg: #eeeeee;
+$gray-dark:#ddd;
+$gray:#eee;
+//$blue: #50BAEF;
+$blue: #3BC7F6;
+$black: #555;
+//80,186,239
+$light-blue: #7DD3F4;
+$dark-blue: #138FCD;
+//19,143,205
+$green: #2AD37A;
+$danger:#FF8484;
+$warning:#eea236;
+$navbar-height: 60px;
+$logo-height: 40px;
+
+$footer-color: #333;
+$footer-height: 100px;
+$dark-footer-color: darken($footer-color, 20%);
+
+$navbar-color: $blue;
+
+$landing-color: $blue;
+$landing-height: 400px;
+//make landing+navbar have the height of the viewport
+
+$apps-color: white;
+$apps-height: 580px;
+
+$code-height: 500px;
+$code-color: white;
+$well-background: #102D42;
+$tab-color: $blue;
+$tab-unselected-color: #23241f;
+$code-title: $dark-blue;
+
+$coverage-color: #fff;
+$coverage-border: #dedede;
+
+$features-color: #fff;
+$features-height: 500px;
+
+$pricing-color: #eee;
+
+$news-color: $footer-color;
+$news-height: 140px;
+
+$app-background: #aaa;
+
+$start-color: white;
+$start-height: 200px;
+
+$autopilot-primary-color: #FFA74D;
+
+/* console */
+$manage-height: 60px;
+
+$section-padding-top: 40px;
+$section-padding-bottom: 40px;
+
+@mixin font-face($font-family, $file-path, $font-weight, $font-style) {
+  @font-face {
+    font-family: $font-family;
+      src: url('#{$file-path}.eot');
+      src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+           url('#{$file-path}.woff') format('woff'),
+           url('#{$file-path}.ttf') format('truetype'),
+           url('#{$file-path}.svg##{$font-family}') format('svg');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+  // Chrome for Windows rendering fix: http://www.adtrak.co.uk/blog/font-face-chrome-rendering/
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    @font-face {
+      font-family: $font-family;
+        src: url('#{$file-path}.svg##{$font-family}') format('svg');
+    }
+  }
+}
+
+@font-face {
+    font-family: "Source Sans Pro Light";
+    src: url('/styles/fonts/source/sourcesanspro-light.ttf');
+}
+
+$font-bold-i: "Source Sans Pro Bold Italic";
+$font-black: "Source Sans Pro Black";
+$font-black-i: "Source Sans Pro Black Italic";
+$font-semi-bold-i: "Source Sans Pro Semibold Italic";
+$font-extra-light: "Source Sans Pro Extra Light";
+$font-light: "Source Sans Pro Light";
+$font-bold: "Source Sans Pro Bold";
+$font-regular: "Source Sans Pro Regular";
+$font-extra-light-i: "Source Sans Pro Extra Light Italic";
+$font-light-i: "Source Sans Pro Light Italic";
+$font-italic: "Source Sans Pro Italic";
+$font-semi-bold: "Source Sans Pro Semi Bold";
