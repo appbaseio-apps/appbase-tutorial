@@ -109,7 +109,16 @@ function TutorialController($scope, $http, $location, $timeout, Loader, Tutorial
 		$scope.updateStep = false;
 		$scope.step_change(1);
 	}
-	$timeout($scope.initialize_var, 300);
+
+	$scope.init = function() {
+		console.log("Tutorial is waiting for element");
+		if($('.tutorial-container').length) {
+			$scope.initialize_var();
+		} else {
+			$timeout($scope.init, 500);
+		}
+	}
+	$scope.init();
 
 	//Check auth
 	function check_auth() {
