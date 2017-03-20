@@ -49,7 +49,8 @@ var files = {
 			'bower_components/codemirror/lib/codemirror.css',
 			'bower_components/codemirror/addon/fold/foldgutter.css',
 			'bower_components/codemirror/addon/dialog/dialog.css',
-			'bower_components/font-awesome/css/font-awesome.min.css'
+			'bower_components/font-awesome/css/font-awesome.min.css',
+			'bower_components/bootstrap3-dialog/dist/css/bootstrap-dialog.min.css'
 			
 		],
 		custom: ['css/*.css'],
@@ -77,6 +78,7 @@ var files = {
 			'bower_components/codemirror/addon/fold/comment-fold.js',
 			'bower_components/codemirror/mode/yaml/yaml.js',
 			'bower_components/codemirror/keymap/sublime.js',
+			'bower_components/bootstrap3-dialog/dist/js/bootstrap-dialog.min.js',
 			'assets/vendor/*.js'
 		],
 		custom: [
