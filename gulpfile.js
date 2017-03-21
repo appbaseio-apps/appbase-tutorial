@@ -149,7 +149,7 @@ gulp.task('moveFonts', function() {
 	return gulp.src([
 			'bower_components/bootstrap/dist/fonts/*',
 			'bower_components/font-awesome/fonts/*',
-			'assets/styles/fonts/**/*'
+			'assets/fonts/**/*'
 		])
 		.pipe(gulp.dest('dist/fonts'));
 });
