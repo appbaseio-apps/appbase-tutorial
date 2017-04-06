@@ -226,10 +226,9 @@ body {
     .tutorial-main-container .tutorial-part-body .highlight-light {
       background: #fdf6e3;
       border: 1px solid #ECE2C7; }
-      .tutorial-main-container .tutorial-part-body .highlight-light div {
-        padding: 5px 10px; }
       .tutorial-main-container .tutorial-part-body .highlight-light .highlight-response {
-        background: #ECE2C7; }
+        background: #ECE2C7;
+        padding: 5px 10px; }
       .tutorial-main-container .tutorial-part-body .highlight-light pre {
         background: transparent;
         border: 0;
@@ -331,41 +330,6 @@ textarea.insert_text {
   font-weight: bold !important; }
   .btn-run:hover, .btn-run:active, .btn-run:focus {
     color: #2AD37A !important; }
-
-.tutorial-modal .modal-header {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px; }
-
-.tutorial-modal .modal-content {
-  border-radius: 10px; }
-
-.tutorial-modal .modal-footer {
-  padding-top: 0; }
-
-.tutorial-modal .btn-yes {
-  background: transparent !important;
-  border: 1px solid #3BC7F6 !important;
-  color: #3BC7F6 !important;
-  padding: 0 10px !important;
-  font-weight: bold;
-  text-transform: none !important; }
-
-.tutorial-modal .btn-no {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 36px;
-  height: 36px;
-  font-size: 24px;
-  line-height: 16px;
-  padding: 8px 10px;
-  border-radius: 50%;
-  text-align: center;
-  background: #ccc !important;
-  color: #fff;
-  opacity: 0.8; }
-  .tutorial-modal .btn-no:hover {
-    opacity: 1; }
 
 #onlyCopy {
   height: 0;

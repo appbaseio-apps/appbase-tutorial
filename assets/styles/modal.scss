@@ -1,0 +1,205 @@
+@import "variables.scss";
+.modal-appbase {
+	.modal-content {
+		border-radius: 4px;
+		border: 3px solid;
+		font-family: $font-light;
+		.modal-header {
+			font-family: $font-light;
+			font-size: 18px;
+			background-color: inherit;
+			border: 0;
+			padding: 5px 15px 0 15px;
+		}
+		.modal-footer {
+			border: 0;
+			padding-top: 0;
+		}
+		.modal-body {
+			padding-top: 15px;
+		}
+		.close {
+			width: 20px;
+			height: 20px;
+			border-radius: 100%;
+			border: 1px solid;
+			font-size: 14px;
+			line-height: 14px;
+			padding: 3px 0;
+			text-align: center;
+			position: absolute;
+			right: 5px;
+			top: 5px;
+			margin-top: 0;
+			background: transparent;
+			opacity: 1;
+			font-family: $font-light;
+		}
+		.modal-btn {
+			background: transparent;
+			color: inherit;
+			border: 1px solid;
+			font-family: $font-light;
+			font-size: 16px;
+			padding: 4px 20px;
+		}
+	}
+	&.modal-white {
+		.modal-content {
+			color: #fff;
+			background: $blue;
+		}
+		.modal-btn,
+		.close {
+			color: #fff;
+			&:hover,
+			&:focus,
+			&:active {
+				background: #fff;
+				color: $blue;
+			}
+		}
+		a {
+			color: #fff;
+			border-bottom: 1px dotted;
+		}
+	}
+	&.modal-red {
+		.modal-content {
+			background: #fff;
+			border-color: $danger;
+		}
+		.bootstrap-dialog-title,
+		.close,
+		.modal-btn {
+			color: $danger;
+		}
+		.modal-btn,
+		.close {
+			&:hover,
+			&:focus,
+			&:active {
+				background: $danger;
+				color: #fff;
+			}
+		}
+		.btn-no {
+			color: $black;
+			&:hover,
+			&:focus,
+			&:active {
+				color: #fff;
+				background: $black;
+			}
+		}
+	}
+	&.modal-blue {
+		.modal-content {
+			background: #fff;
+			border-color: $blue;
+		}
+		.bootstrap-dialog-title,
+		.close,
+		.modal-btn,
+		.modal-header {
+			color: $blue;
+		}
+		.modal-btn,
+		.close {
+			&:hover,
+			&:focus,
+			&:active {
+				background: $blue;
+				color: #fff;
+			}
+		}
+		.btn-no {
+			color: $black;
+			&:hover,
+			&:focus,
+			&:active {
+				color: #fff;
+				background: $black;
+			}
+		}
+	}
+	.modal-sm {
+		.modal-body {
+			padding-top: 25px;
+		}
+	}
+	.modal-btn {
+		&.modal-btn-green {
+			color: $n-green;
+			&:hover,
+			&:focus,
+			&:active {
+				background: $n-green;
+				color: #fff;
+			}
+		}
+	}
+	&#login_modal,
+	&#signup_modal {
+		margin-top: 20vh;
+		.modal-header {
+			padding: 35px 15px 0 15px;
+		}
+	}
+}
+
+.modal {
+	.modal-header {
+		border: 0;
+		padding: 5px 15px 0 15px;
+		color: $n-lblue;
+		.modal-title {
+			padding-top: 5px;
+			text-align: left;
+			color: $n-lblue;
+		}
+		.close {
+			width: 20px;
+			height: 20px;
+			border-radius: 100%;
+			border: 1px solid;
+			font-size: 14px;
+			line-height: 0px;
+			padding: 3px 0;
+			text-align: center;
+			position: absolute;
+			right: 5px;
+			top: 5px;
+			margin-top: 0;
+			background: transparent;
+			opacity: 1;
+			color: $n-lblue;
+		}
+	}
+	.modal-content {
+		background: #fff;
+		border-radius: 4px;
+		border: 3px solid;
+		border-color: $n-lblue;
+		p {
+			margin-bottom: 15px;
+		}
+	}
+	.btn {
+		border: 1px solid;
+	}
+	.ad-confirm-btn {
+		margin-right: 15px;
+		background: transparent;
+		color: $n-lblue;
+		border-color: $n-lblue;
+		&:hover {
+			background: $n-lblue;
+			color: #fff;
+		}
+	}
+	.ad-cancel-btn {
+		background: transparent;
+		border-color: transparent;
+	}
+}

@@ -182,11 +182,9 @@ body {
 		.highlight-light{
 			background: #fdf6e3;
 			border: 1px solid #ECE2C7;
-			div{
-				padding: 5px 10px;
-			}
 			.highlight-response{
 				background: #ECE2C7;
+				padding: 5px 10px;
 			}
 			pre{
 				background: transparent;
@@ -317,44 +315,6 @@ textarea.insert_text{
 	}
 }
 
-.tutorial-modal{
- 	.modal-header{
-	    border-top-left-radius: 10px;
-    	border-top-right-radius: 10px;
-	}
-	.modal-content{
-	    border-radius: 10px;
-	}
-	.modal-footer{
-		padding-top: 0;
-	}
-	.btn-yes{
-		background: transparent !important;
-		border: 1px solid $blue !important;
-		color: $blue !important;
-		padding: 0 10px !important;
-		font-weight: bold;
-		text-transform: none !important;
-	}
-	.btn-no{
-		position: absolute;
-	    top: 10px;
-	    right: 10px;
-	    width: 36px;
-	    height: 36px;
-	    font-size: 24px;
-	    line-height: 16px;
-	    padding: 8px 10px;
-	    border-radius: 50%;
-	    text-align: center;
-	    background: #ccc !important;
-	    color: #fff;
-	    opacity: 0.8;
-	    &:hover{
-	    	opacity: 1;
-	    }
-	}
-}
 #onlyCopy{
 	height: 0;
     width: 0;

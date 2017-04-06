@@ -464,14 +464,14 @@ function TutorialController($scope, $http, $location, $timeout, Loader, Tutorial
 			$scope.current_modal = $scope.current_caption == 'Update' ? $scope.vars.getStream.modal : $scope.vars.searchStream.modal;
 			var a = new BootstrapDialog({
 				title: '<i class="fa fa-rotate-right"></i> ' + $scope.current_modal.title,
-				message: '<p class="explain-text">' + $scope.current_modal.text + '</p><textarea class="insert_text"></textarea>',
+				message: '<p class="explain-text">' + $scope.current_modal.text + '</p><textarea class="insert_text" id="insert-text"></textarea>',
 				closable: true,
 				cssClass: 'confirm-del insert_data_modal modal-appbase modal-blue',
 				buttons: [{
 					label: 'Submit',
 					cssClass: 'btn-yes modal-btn',
 					action: function(dialog) {
-						$scope.insert_data.user_input = $('.insert_text').val();
+						$scope.insert_data.user_input = $scope.editor.getValue();
 						try {
 							if (JSON.parse($scope.insert_data.user_input)) {
 								$scope.insert_data.user_input = JSON.parse($scope.insert_data.user_input);
@@ -514,7 +514,19 @@ function TutorialController($scope, $http, $location, $timeout, Loader, Tutorial
 						var user_object = JSON.stringify($scope.variables.created_app.purejson, null, 4);
 					}
 					user_object2 = user_object.replace(/<br.*?>/g, "\n");
-					$('.insert_text').val(user_object2);
+					var defaultOptions = {
+						lineNumbers: true,
+						mode: "javascript",
+						autoCloseBrackets: true,
+						matchBrackets: true,
+						showCursorWhenSelecting: true,
+						tabSize: 2,
+						extraKeys: {"Ctrl-Q": function(cm){ cm.foldCode(cm.getCursor()); }},
+						foldGutter: true,
+						gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"]
+					};
+					$scope.editor = CodeMirror.fromTextArea(document.getElementById("insert-text"), defaultOptions);
+					$scope.editor.setValue(user_object2);
 				}
 			}).open();
 		}
