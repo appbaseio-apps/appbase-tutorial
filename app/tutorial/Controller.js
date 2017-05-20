@@ -156,19 +156,13 @@ function TutorialController($scope, $http, $location, $timeout, Loader, Tutorial
 			//Create App
 			TutorialService.createApp($scope.variables.app_name).success(function(data) {
 				if (data.message == 'App Created') {
-					$scope.variables.created_app.user = data.body.username;
-					$scope.variables.created_app.pass = data.body.password;
-					$scope.variables.created_app.name = $scope.variables.app_name;
-
-					setTimeout(function() {
-						hljs.initHighlighting.called = false;
-						hljs.initHighlighting();
-						$('.tutorial-app-name-container').addClass('disabled');
-						$('.tutorial-part-input').attr('readonly', 'true');
-						$scope.step_change(2);
-						$('.tutorial-app-name-container .loading-container').hide();
-						$scope.popover();
-					}, 500);
+					TutorialService.getPermission(data.body.id).success(function(data) {
+						data.body.forEach(function(permission) {
+							if(permission.read && permission.write) {
+								$scope.setupPermission(permission.username, permission.password);
+							}
+						});
+					});
 				} else {
 					alert('Please try again');
 					$('.tutorial-app-name-container .loading-container').hide();
@@ -179,6 +173,21 @@ function TutorialController($scope, $http, $location, $timeout, Loader, Tutorial
 			});
 
 		}
+	}
+
+	$scope.setupPermission = function(username, password) {
+		$scope.variables.created_app.user = username;
+		$scope.variables.created_app.pass = password;
+		$scope.variables.created_app.name = $scope.variables.app_name;
+		setTimeout(function() {
+			hljs.initHighlighting.called = false;
+			hljs.initHighlighting();
+			$('.tutorial-app-name-container').addClass('disabled');
+			$('.tutorial-part-input').attr('readonly', 'true');
+			$scope.step_change(2);
+			$('.tutorial-app-name-container .loading-container').hide();
+			$scope.popover();
+		}, 500);
 	}
 
 	//Code next

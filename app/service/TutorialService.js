@@ -13,6 +13,10 @@ function TutorialService($http) {
 		return $http.put(tutorial_adrs + 'app/' + app_name);
 	};
 
+	this.getPermission = function(appId) {
+		return $http.get(tutorial_adrs + 'app/' + appId + '/permissions');
+	}
+
 	this.step1 = function(obj) {
 		//stopStream();
 		var create_link = 'https://scalr.api.appbase.io/' + obj.name + '/' + obj.type + '/' + obj.id;
