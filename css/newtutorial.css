@@ -91,6 +91,10 @@ body {
   background: #eeeeee;
   font-family: "Source Sans Pro Regular"; }
 
+.btn {
+  border-radius: 0;
+  font-size: 18px; }
+
 .tutorial-main-container {
   background: #eeeeee;
   color: #999;
@@ -202,7 +206,10 @@ body {
         border: 1px solid #3BC7F6;
         border-radius: 4px;
         color: #3BC7F6; }
-      .tutorial-main-container .tutorial-part-body .code-block .nav-tabs > li.active > a, .tutorial-main-container .tutorial-part-body .code-block .nav-tabs > li.active > a:hover, .tutorial-main-container .tutorial-part-body .code-block .nav-tabs > li.active > a:focus, .tutorial-main-container .tutorial-part-body .code-block .nav-tabs > li > a:hover {
+      .tutorial-main-container .tutorial-part-body .code-block .nav-tabs > li.active > a,
+      .tutorial-main-container .tutorial-part-body .code-block .nav-tabs > li.active > a:hover,
+      .tutorial-main-container .tutorial-part-body .code-block .nav-tabs > li.active > a:focus,
+      .tutorial-main-container .tutorial-part-body .code-block .nav-tabs > li > a:hover {
         background: #3BC7F6;
         color: #232E44; }
       .tutorial-main-container .tutorial-part-body .code-block .nav-tabs {
@@ -324,10 +331,7 @@ textarea.insert_text {
 .btn-run {
   background: transparent;
   border: 1px solid #2AD37A !important;
-  color: #2AD37A;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-  font-weight: bold !important; }
+  color: #2AD37A; }
   .btn-run:hover, .btn-run:active, .btn-run:focus {
     color: #2AD37A !important; }
 

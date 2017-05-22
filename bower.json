@@ -22,6 +22,6 @@
     "angular": "~1.5.8",
     "codemirror": "^5.24.2",
     "highlightjs": "^9.10.0",
-    "bootstrap3-dialog": "bootstrap-dialog#^1.35.3"
+    "bootstrap3-dialog": "^1.35.4"
   }
 }
