@@ -127,10 +127,25 @@ function TutorialController($scope, $http, $location, $timeout, Loader, Tutorial
 		});
 	}
 
+	$scope.isAppnameValid = function() {
+		var validate = true;
+		var appName = $scope.variables.app_name;
+		appName = appName.trim();
+		if (!appName) {
+			validate = false;
+		} else {
+			var patt = /^[a-zA-Z0-9_+-@$\.]+$/;
+			if (!patt.test(appName)) {
+				validate = false;
+			}
+		}
+		return validate;
+	}
+
 	//On Enter
 	$scope.app_submit = function(event) {
 		var enter_flag = (event.keyCode == 13) || (event.which == 13);
-		if (enter_flag) {
+		if (enter_flag && $scope.isAppnameValid()) {
 			$('.tutorial-app-name-container .loading-container').show();
 			// var data = {
 			// 	body: {
