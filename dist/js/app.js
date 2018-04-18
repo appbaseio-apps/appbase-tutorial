@@ -264,8 +264,8 @@ function TutorialController($scope, $http, $location, $timeout, Loader, Tutorial
 	}
 
 	//On Enter
-	$scope.app_submit = function(event) {
-		var enter_flag = (event.keyCode == 13) || (event.which == 13);
+	$scope.app_submit = function(event, skip) {
+		var enter_flag = (event.keyCode == 13) || (event.which == 13) || skip;
 		if (enter_flag && $scope.isAppnameValid()) {
 			$('.tutorial-app-name-container .loading-container').show();
 			// var data = {

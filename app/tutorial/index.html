@@ -17,11 +17,11 @@
 			<span class="tutorial-part-no">1</span>
 			<div class="tutorial-part-title">
 				<h4>Choose an app name</h4>
-				<span class="tutorial-part-subtitle">An app is equivalent to a DB instance. App names are unique and should not contain spaces.
+				<span class="tutorial-part-subtitle">An app is equivalent to a DB instance. App names are unique and should only contain the characters 'a-z,A-Z,0-9 and -._+$@'.
 		</span>
 			</div>
 			<div class="tutorial-part-body">
-				<div class="with-load-container tutorial-input-style tutorial-app-name-container">
+				<div class="with-load-container tutorial-input-style tutorial-app-name-container" style="display: flex">
 					<input type="text" data-ng-model="variables.app_name" data-ng-keyup="app_submit($event);" class="tutorial-part-input" placeholder="App name" />
 					<div class="loading-container">
 						<span class="vertical-0">
@@ -33,6 +33,7 @@
 					<div class="input-success">
 						<i class="fa fa-check-square-o"></i>
 					</div>
+					<button ng-click="app_submit($event, true)" style="margin-left: 70px; background: #B6EF7E; color: #53683B; border: none;">Submit</button>
 				</div>
 			</div>
 		</section>
