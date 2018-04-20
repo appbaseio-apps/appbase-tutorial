@@ -125,6 +125,17 @@ angular
 
 TutorialController.$inject = ['$scope', '$http', '$location', '$timeout', 'Loader', 'TutorialService'];
 
+function toggleHidden() {
+	var submitBtn = document.querySelector('#new-submit-btn');
+	var inputField = document.querySelector('.tutorial-part-input');
+	var length = inputField.value.length;
+	if (length && submitBtn.classList.contains('hidden')) {
+		submitBtn.classList.toggle('hidden');
+	} else if (!length && !submitBtn.classList.contains('hidden')) {
+		submitBtn.classList.toggle('hidden');
+	}
+}
+
 function TutorialController($scope, $http, $location, $timeout, Loader, TutorialService) {
 	appbaseRef = null;
 
@@ -266,6 +277,7 @@ function TutorialController($scope, $http, $location, $timeout, Loader, Tutorial
 	//On Enter
 	$scope.app_submit = function(event, skip) {
 		var enter_flag = (event.keyCode == 13) || (event.which == 13) || skip;
+		var submitBtn = document.querySelector('#new-submit-btn');
 		if (enter_flag && $scope.isAppnameValid()) {
 			$('.tutorial-app-name-container .loading-container').show();
 			// var data = {
@@ -292,6 +304,9 @@ function TutorialController($scope, $http, $location, $timeout, Loader, Tutorial
 			//Create App
 			TutorialService.createApp($scope.variables.app_name).success(function(data) {
 				if (data.message == 'App Created') {
+					submitBtn.classList.toggle('hidden');
+					var inputField = document.querySelector('.tutorial-part-input');
+					inputField.disabled = true;
 					TutorialService.getPermission(data.body.id).success(function(data) {
 						data.body.forEach(function(permission) {
 							if(permission.read && permission.write) {

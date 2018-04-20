@@ -95,6 +95,9 @@ body {
   border-radius: 0;
   font-size: 18px; }
 
+.hidden {
+  display: none; }
+
 .tutorial-main-container {
   background: #eeeeee;
   color: #999;
